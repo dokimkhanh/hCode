@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "HCode",
+  "version": "1.0",
+  "description": "Generate and copy URL based on selected text.",
+  "permissions": ["contextMenus", "activeTab", "scripting", "notifications"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/img/icons/icon16.png",
+      "48": "assets/img/icons/icon48.png",
+      "128": "assets/img/icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "assets/img/icons/icon16.png",
+    "48": "assets/img/icons/icon48.png",
+    "128": "assets/img/icons/icon128.png"
+  }
+}

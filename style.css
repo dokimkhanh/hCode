@@ -1,0 +1,47 @@
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    width: 300px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+    margin: 0 10px;
+    background-size: cover;
+    display: inline-block;
+}
+
+.github-icon {
+    background-image: url('assets/img/icons/github.png');
+}
+
+.facebook-icon {
+    background-image: url('assets/img/icons/facebook.png');
+}
