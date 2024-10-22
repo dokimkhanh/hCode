@@ -6,7 +6,6 @@ chrome.runtime.onMessage.addListener((message) => {
     textArea.select();
     document.execCommand("copy");
     document.body.removeChild(textArea);
-    alert(`Đã sao chép ${message.text}`);
     showCustomNotification();
   }
 });

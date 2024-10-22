@@ -7,15 +7,15 @@ const websites = {
 
 chrome.runtime.onInstalled.addListener(() => {
     chrome.contextMenus.create({
-        id: "HCodeLinkGenerator",
-        title: "HCode",
+        id: "hCodeLinkGenerator",
+        title: "hCode",
         contexts: ["selection"]
     });
 
     Object.keys(websites).forEach(key => {
         chrome.contextMenus.create({
             id: key,
-            parentId: "HCodeLinkGenerator",
+            parentId: "hCodeLinkGenerator",
             title: key.charAt(0).toUpperCase() + key.slice(1),
             contexts: ["selection"],
             // icons: [{ size: 16, url: websites[key].icon }]
