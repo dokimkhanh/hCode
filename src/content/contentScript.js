@@ -6,11 +6,11 @@ chrome.runtime.onMessage.addListener((message) => {
     textArea.select();
     document.execCommand("copy");
     document.body.removeChild(textArea);
-    showCustomNotification();
+    showCustomNotification("Đã sao chép: " + message.text);
   }
 });
 
-function showCustomNotification() {
+function showCustomNotification(notificationText) {
   const notification = document.createElement('div');
   notification.id = 'custom-notification';
   notification.style.position = 'fixed';
@@ -20,13 +20,12 @@ function showCustomNotification() {
   notification.style.color = 'white';
   notification.style.padding = '10px';
   notification.style.borderRadius = '5px';
-  notification.innerText = 'Đã sao chép thành công!';
+  notification.innerText = notificationText; 
 
   document.body.appendChild(notification);
 
   setTimeout(() => {
-    notification.remove();
+      notification.remove();
   }, 3000);
 }
-
 
