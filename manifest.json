@@ -1,16 +1,17 @@
 {
   "manifest_version": 3,
-  "name": "HCode",
-  "version": "1.0",
+  "name": "hCode",
+  "version": "1.0.0",
   "description": "Generate and copy URL based on selected text.",
   "permissions": ["contextMenus", "activeTab", "scripting", "notifications"],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "src/background/background.js",
+    "type": "module"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["contentScript.js"]
+      "js": ["src/content/contentScript.js"]
     }
   ],
   "action": {
