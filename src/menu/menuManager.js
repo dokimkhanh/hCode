@@ -43,16 +43,20 @@ export function handleMenuClick(info) {
     const selectedText = info.selectionText ? info.selectionText.trim() : "";
     const numbersOnly = selectedText.replace(/\D/g, "");
 
-    if (websites[info.menuItemId] && numbersOnly) {
-        const fullUrl = websites[info.menuItemId].url.replace("{id}", numbersOnly);
-        copyToClipboard(fullUrl);
-    } 
-    else if (info.menuItemId === 'decodeHex' && selectedText) {
-        const decodedText = decodeHex(selectedText);
-        copyToClipboard(decodedText);
-    } 
-    else {
-        console.log("No matching action found or invalid input");
+    try {
+        if (websites[info.menuItemId] && numbersOnly) {
+            const fullUrl = websites[info.menuItemId].url.replace("{id}", numbersOnly);
+            copyToClipboard(fullUrl);
+        }
+        else if (info.menuItemId === 'decodeHex' && selectedText) {
+            const decodedText = decodeHex(selectedText);
+            copyToClipboard(decodedText);
+        }
+        else {
+            console.log("No matching action found or invalid input");
+        }
+    } catch (error) {
+        copyToClipboard(error.message);
     }
 }
 
