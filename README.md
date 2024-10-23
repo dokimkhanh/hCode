@@ -29,7 +29,7 @@ Click "Add extension" to install.
 ## Demo
 
 Insert gif or link to demo
-
+![demo](https://github.com/user-attachments/assets/5a9c2f98-42da-4ff2-828f-4ffaaaa65be6)
 
 ## License
 
