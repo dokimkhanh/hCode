@@ -27,10 +27,8 @@ Click "Add extension" to install.
 ```
     
 ## Demo
-
-Insert gif or link to demo
-![demo](https://github.com/user-attachments/assets/5a9c2f98-42da-4ff2-828f-4ffaaaa65be6)
-https://github.com/user-attachments/assets/8f33ff8e-d59c-45f6-b7f9-751a189d9682
+Test it out: https://ghostbin.site/hub67
+![demo video](https://github.com/user-attachments/assets/2ea86711-f39d-457b-be88-cab7e8bba49c)
 
 ## License
 
